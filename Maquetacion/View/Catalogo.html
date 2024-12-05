@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda - BEC</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .category-title {
+            margin-top: 2rem;
+            font-size: 2rem;
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 0.5rem;
+        }
+        .product-card {
+            margin-bottom: 2rem;
+        }
+        .product-card img {
+            max-height: 200px;
+            object-fit: cover;
+        }
+        .product-card .card-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">BEC</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="Inicio(boostrap).html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Diseños</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="Tienda.html">Tienda</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Contacto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="CarritoDeCompra.html">
+                        <i class="fas fa-shopping-cart"></i> Carrito 
+                        <span id="cart-count" class="badge badge-pill badge-primary">0</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container mt-5">
+        <!-- Categoría Clásica -->
+        <h2 class="category-title">Ropa Clásica</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTcNISVBNobawej5MyWxEtJRgSi0U_ioeUD9A&s" class="card-img-top" alt="Camisa Clásica">
+                    <div class="card-body">
+                        <h5 class="card-title">Camisa Clásica</h5>
+                        <p class="card-text">$50</p>
+                        <input type="number" class="form-control mb-2" min="1" value="1" id="quantity1">
+                        <button class="btn btn-primary btn-agregar-carrito" data-nombre="Camisa Clásica" data-precio="50" data-cantidad-id="quantity1">Agregar al Carrito</button>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            <!-- Agregar más productos aquí -->
+            <div class="container mt-5">
+                <!-- Categoría Clásica -->
+                <div class="row">
+                    <div class="col-md-4">
+                        <div class="card product-card">
+                            <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQAlAMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAACAAEEBQYDB//EAD8QAAEDAgMEBwUFBQkAAAAAAAEAAgMEEQUSIQYxQVETIjJhcaGxFEKBkcFSYmNy8AcjM0PhFSQmNDVTc6LC/8QAGQEAAwEBAQAAAAAAAAAAAAAAAQMEAAIF/8QAHxEBAAICAwEBAQEAAAAAAAAAAAExAgMRITIiQUIS/9oADAMBAAIRAxEAPwD05Zzb+AT7MTtvYtkYQeWoWjVFtnQSV+Cyezus+A9Jr7wGh+O9T5UbjbzeGCGOFscssU0xJLg12rbAG3LcQo2Fythxp7Y3XY+JubSwzcVY0ccTWgMis8i+oNie/kfUKFidM2lnpZoGFj3X6Z9ubtLfAj5KdZMddNLG/La+5dxZwvvHJRqQuMQ6QB3fbVd8mWxbcJYn6Nuulkg2yWa6IICZ7RksEMbMl3OOt0TzlF1ykk61uCLD6x0aA1vM702VoOri4oXPbq5xIb3qLJWjNlp25nc1uAdamqipx19/Cyoq2rlqL3Bt3KYIH1EhdNcgcUFUIYRlDQCdLrqAaLZSH/C1cT/NL3D4D+ipcYa5sTOZG5aOmmjocCpqOPtSx3eeQcqLFbytzjgEM55mDNMcYzLR7HANwGEji5x81cOVfs/T+y4NSx825/nr9VPKpikGVhSTJIgtwgqBmpphzY70RhNL/Cf+U+i7mmi3nlBlyuBtpouGLMY6ItcBY81yglEZfc2F/qVB2irWxiB5cQ3pWD5uH0uoePp638wsMLmzAsJ6zDYhWRsVmWPNLjrGtdeKZnHgQtEQCNQjMJ+OJOQO5LXguLowd2iExPG57vgUGHMJCwhcwC0Bzru7lzldI0dZzrIQamQdSRrR4LBI3Uz5iDMbD7IXaOFsTbNa1cmwyn+JVO+AXVtO23akd4lZoBMcrToqiZrnSGRwGnNWtQLCw81XuZnmaCBa66hv1Jq5yx1HGxpc55a0kX6o4k+AU2vjBYHtI181YULIqeWoq7xgCHoWAG9ySCdO6zVQYpV9PUdDBq1unguZilH5MNthpvh1Lpb9y30XcqNhYIwylDgQRE3f4KQVVFPLyskkySILgJ9OO5ME43rsHn+0eEGgxAmO/s04zMPAcx4j0Wdx+iFVgs8bLmojsWAC5Lmm4HxXr1VTQ1cLoamMPjdwPDw5FeUbSQy0mKyspiejjdZuY6/E8VPnjxlyt1bucf8AMoFTVQS0dE8kR18cjM8J7Rvof13LTBxLAG2IA1Ky/SVVS1sbwy5dvy6j4rQuBFMACb2AS5dZTEz06OBHakUeWVjdTMT3BcHQvfrmK5yUdm3e+wQcqzaDEp4KdppIjI4vAOY2sLq3oqufomZm5nWGYW3fFQ6XD/b/AO1IIQT0eGzyNcft9UN9fJWGCyvdQ07pQLlo6w+q6mPmHMT9JLKwe9E4ea7NlDt3oiGX9BOdVw7R5hcd64QPME2ewIsQQeKlSNvuUWQb1m5mOx+z4pV00jqWEdFe37u3ou2A4FUmrZJXQOZEzrEP988lfbMaUD/z/RWpTscIsrPflQHIUZQJqcySdMsy4CdMCnC7A689x2BsmJVOYfzCvQlgsZ0xSpH4hSttG6rVsVMxhBAC6T9ga2F0YXGsvkZbiVMocpJgxu/goE0kk7srL25qU6ndIRfcmn6OmjOXR25EGg/Z5QgsxOd/WD8sA+RLvVvyVZT0xp4zCBYxktI8DZbDY2mFNs/TWHWmvM4951VHjkPs+KzBos15zjwP9bpmcfJeE/SC24XQJtEtyScZ24qFLqVMkNmqE/eUYCWp2aH90k/N9FauVds8LUJNt7vorIqnCkudgKFEUK6cmSSSWZbBEEIRBdgdYTHm5cWqR9+63axO07SzF5TwcAfJK2+TdXpWBcqoizL811Cj1nuKZQGSazNNCqyrvJqXanQBT5GgNvyXGhi9qxekpwAS+Vo+F11EduZp6tQxez0cEQ9yNo8lSbW014Yakb2nIfotD4Kr2kZmwiY8WkO87fVUZR8p8J+mPCdCw33o8zealVuc56qiu3qRUHcFHd2hyRgJbHA22w2LvuVNKi4OLYZB+W6lFU40kysBQoygRAySSSzLYIghCIJgHWS2wZavidbtR/UrWLMbZNtLTO5tI/XzStvkzX6Z0LjU6vZc2Fl1Ch4k8h8bW8QVNChHq5/darLYmlMm0FO54vkDpD3WGnmq2KmzdZ/BajYKMPxGtnG6OJrPmb/+V3jbnOeIbYqHi0fS4ZVM/DJHw1+imHVC5oc0tIuDoQeKomOk2NvO2p080ZhnljPuPLfkU11HNrYpym7Q8FwPaXebtjwXD3kYCW3wsWw6n/IFIK5UIy0MA5MC6lUxSSbCUBRlAUQMkkksy2CIIQnCYAt6y22brz0zfuE+a1Cyu2TbVNO78MjzStnl3r9M+FEqwX1LBwa1SQo1U60gHcplIZnhrLBa/wDZ5Bkw2rm4yT5R4Bo+pKxjjcknWwXoGxbMmzsB+297v+xH0Tddl7J6XZTFOUxT07CYsMuKVI/E9VFU7HhlxioHMg+QUBR5XKzHy5T9oeC5NPXC6T9oeC5x/wAVvitDS3lL/lIfyBGU8YyxMHJo9EzlVFJJCUBRlCsxkkklmWoTpgiC7Agsttmf3tMPuuWqCx218mbEWM4MjHnql7fJmv0owQoNUS6oIvrYKbzUPLnq3nTSw8lMoJkJsS7RekbMxdDgFC3nEHfPX6rzupOWF2XfZeoUMYioqeMbmRtb8gnarK2z07FCURTFOIYraMWxiXvaCPkq1WO0br4vLbgGjyVapMvUrMfMOFQesPBBH2gjn7Q8EzRYhCGlu6N/SUkL/tMCNyh4JJ0mGQ912/JTCqYpLNhKFOUJRAkkklmWoRBCE67ASwm0j82M1HJpDfJbpee427Ni9X/yFK20bqtFHNR2WErwBucV3auDNZZD94pHB5OGeWJn2ntHzK9WAAAA3ALy2kGfE6Rv47PVeplO1fpO0xQlEUJTZJYLHpA7F6q327fIBQLqZigBxKpuNekd6qIQpMrWY05SavHgncml7YQ5huKDNVsxJnoHt4terYqh2Xe29Qwcmn1V8VRh5TZ+gFMU5KE7l05Mkkksy2BThJJdgfiPFebYm4uxGpJ4yO9UkkrbRuq3BupXKPVzvEp0kg8qZxbidGR/vs9QvVzvSST9RO2zEoSmSTJJYHF/9Vqh+IVCJSSUmVq8acajQhcXDckkg6X2y/UrSATZ0RvfxC0/BJJP10m2WEhCdySS7cGSSSWZ/9k=">
+                            <div class="card-body">
+                                <h5 class="card-title">Pantalon Clasico</h5>
+                                <p class="card-text">$50</p>
+                                <input type="number" class="form-control mb-2" min="1" value="1" id="quantity1">
+                                <button class="btn btn-primary btn-agregar-carrito" data-nombre="Camisa Clásica" data-precio="50" data-cantidad-id="quantity1">Agregar al Carrito</button>
+                            </div>
+                        </div>
+                    </div>
+        </div>
+
+        <!-- Categoría Deportiva -->
+        <h2 class="category-title">Ropa Deportiva</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTflRLPWF-sOLrH-4U3Gy7Eb_RbqH9FnUEt0Q&s" class="card-img-top" alt="Pantalón Deportivo">
+                    <div class="card-body">
+                        <h5 class="card-title">Pantalón Deportivo</h5>
+                        <p class="card-text">$30</p>
+                        <input type="number" class="form-control mb-2" min="1" value="1" id="quantity2">
+                        <button class="btn btn-primary btn-agregar-carrito" data-nombre="Pantalón Deportivo" data-precio="30" data-cantidad-id="quantity2">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Agregar más productos aquí -->
+        </div>
+        <!-- Agregar más categorías aquí: Pijamas, Casual, Seria -->
+        <h2 class="category-title">Ropa Casual</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://www.naga.com.co/cdn/shop/files/SILUETAREGULAR-DRILCASUALESPINADEPESCADO-R1021110481-4.GRISOSC-DELANTERO_1000x.jpg?v=1703877604g" class="card-img-top" alt="Pantalón Deportivo">
+                    <div class="card-body">
+                        <h5 class="card-title">Pantalón casual</h5>
+                        <p class="card-text">$30</p>
+                        <input type="number" class="form-control mb-2" min="1" value="1" id="quantity2">
+                        <button class="btn btn-primary btn-agregar-carrito" data-nombre="Pantalón Deportivo" data-precio="30" data-cantidad-id="quantity2">Agregar al Carrito</button>
+                    </div>
+                </div>
+            </div>
+            
+    </div>
+    <h2 class="category-title">Ropa Seria</h2>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card product-card">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNKrEdYvmhQ6vDOykzuCmh_mRWegUhQitnAg&s" class="card-img-top" alt="Pantalón Deportivo">
+                <div class="card-body">
+                    <h5 class="card-title">Camisa seria</h5>
+                    <p class="card-text">$30</p>
+                    <input type="number" class="form-control mb-2" min="1" value="1" id="quantity2">
+                    <button class="btn btn-primary btn-agregar-carrito" data-nombre="Pantalón Deportivo" data-precio="30" data-cantidad-id="quantity2">Agregar al Carrito</button>
+                </div>
+            </div>
+            
+        </div>
+        </div>
+        <h2 class="category-title">Pijamas</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="card product-card">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6GbtfYZAfBgz2cGMZuAdjo-Iv_uilWM2q9A&s" class="card-img-top" alt="Pantalón Deportivo">
+                    <div class="card-body">
+                        <h5 class="card-title">pijama</h5>
+                        <p class="card-text">$30</p>
+                        <input type="number" class="form-control mb-2" min="1" value="1" id="quantity2">
+                        <button class="btn btn-primary btn-agregar-carrito" data-nombre="Pantalón Deportivo" data-precio="30" data-cantidad-id="quantity2">Agregar al Carrito</button>
+                    </div>
+                </div>
+            
+    <footer class="bg-light text-center py-4 mt-5">
+        <p>© 2024 Mi Tienda de Ropa | <a href="#">Política de Privacidad</a> | <a href="#">Términos y Condiciones</a></p>
+    </footer>
+
+    <!-- Enlaces a librerías JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+    <!-- Enlace al archivo JS con la funcionalidad del carrito -->
+    <script src="/Maquetacion/Controller/routes/cart.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Inicializar carrito
+            let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+            // Función para agregar producto al carrito
+            function agregarAlCarrito(nombre, precio, cantidad) {
+                const producto = { nombre, precio, cantidad };
+                carrito.push(producto);
+                guardarCarrito();
+                actualizarCantidadCarrito();
+                alert(`${nombre} agregado al carrito.`);
+            }
+
+            // Guardar carrito en localStorage
+            function guardarCarrito() {
+                localStorage.setItem('carrito', JSON.stringify(carrito));
+            }
+
+            // Actualizar contador de carrito en la navegación
+            function actualizarCantidadCarrito() {
+                const cartCount = document.getElementById('cart-count');
+                cartCount.textContent = carrito.reduce((total, item) => total + parseInt(item.cantidad), 0);
+            }
+
+            // Manejar el click en los botones de agregar al carrito
+            const botonesAgregarCarrito = document.querySelectorAll('.btn-agregar-carrito');
+            botonesAgregarCarrito.forEach(boton => {
+                boton.addEventListener('click', function () {
+                    const nombre = boton.dataset.nombre;
+                    const precio = parseFloat(boton.dataset.precio);
+                    const cantidadId = boton.dataset.cantidadId;
+                    const cantidad = parseInt(document.getElementById(cantidadId).value);
+
+                    if (cantidad > 0) {
+                        agregarAlCarrito(nombre, precio, cantidad);
+                    } else {
+                        alert('Por favor, selecciona una cantidad válida.');
+                    }
+                });
+            });
+
+            // Actualizar la cantidad inicial del carrito al cargar la página
+            actualizarCantidadCarrito();
+        });
+    </script>
+</body>
+</html>
